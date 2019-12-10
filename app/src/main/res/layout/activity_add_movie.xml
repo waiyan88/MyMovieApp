@@ -19,13 +19,14 @@
             android:text="movie name"
             android:textSize="25sp"></TextView>
         <EditText
+            android:id="@+id/movie_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></EditText>
 
     </LinearLayout>
     <LinearLayout
 
-        android:id="@+id/movieimagelink"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -36,6 +37,7 @@
             android:text="movie image link"
             android:textSize="25sp"></TextView>
         <EditText
+            android:id="@+id/movie_image_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></EditText>
 
@@ -54,6 +56,7 @@
             android:text="movie video link"
             android:textSize="25sp"></TextView>
         <EditText
+            android:id="@+id/movie_video_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></EditText>
 
@@ -61,7 +64,7 @@
 
     <LinearLayout
 
-        android:id="@+id/movieimagelink"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -71,15 +74,15 @@
             android:layout_height="wrap_content"
             android:text="Movie Category"
             android:textSize="25sp"></TextView>
-        <EditText
+        <Spinner
+            android:id="@+id/movie_category"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></EditText>
+            android:layout_height="wrap_content"></Spinner>
 
     </LinearLayout>
 
     <LinearLayout
 
-        android:id="@+id/movieimagelink"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -90,9 +93,10 @@
             android:layout_height="wrap_content"
             android:text="Series Name"
             android:textSize="25sp"></TextView>
-        <EditText
+        <Spinner
+            android:id="@+id/movie_series_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></EditText>
+            android:layout_height="50dp"></Spinner>
 
     </LinearLayout>
 
@@ -103,14 +107,30 @@
         android:orientation="horizontal">
     <Button
         android:id="@+id/btmsave"
-        android:layout_width="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/ic_save"
+        android:drawableTint="@color/colorWhite"
+        android:paddingLeft="5dp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/btnsavebg"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save"
+        android:onClick="saveMovie"
         />
 
+
         <Button
+            android:background="@drawable/btncancelbg"
+            android:textColor="@color/colorWhite"
+            android:drawableLeft="@drawable/ic_cancel"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"
+            android:onClick="btnCancelMovie"
+            android:layout_width="match_parent"
+            android:layout_margin="30dp"
             android:id="@+id/btncancel"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel" />
 

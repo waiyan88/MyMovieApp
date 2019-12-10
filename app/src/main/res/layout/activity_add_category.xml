@@ -15,8 +15,9 @@
         android:textSize="25sp"></TextView>
 
     <EditText
+        android:id="@+id/categoryname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,15 +26,30 @@
         >
         <Button
             android:id="@+id/btmsave"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_save"
+            android:drawableTint="@color/colorWhite"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btnsavebg"
             android:text="Save"
+            android:onClick="btnsavecategory"
             android:layout_marginLeft="50dp"
             />
 
         <Button
+            android:background="@drawable/btncancelbg"
+            android:textColor="@color/colorWhite"
+            android:drawableLeft="@drawable/ic_cancel"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_margin="30dp"
+            android:onClick="btnCancelCategory"
             android:id="@+id/btncancel"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:layout_marginLeft="50dp"

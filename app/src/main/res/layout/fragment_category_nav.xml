@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryNavFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addcategory"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_add"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/successColor"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/edtext3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Search Category"
+        android:drawableRight="@drawable/ic_search"
+        android:drawableTint="@color/colorAccent"
+        ></EditText>
+
+       <ListView
+           android:id="@+id/lstcategories"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/edtext3"
+           android:layout_marginTop="-2dp"></ListView>
+
+   </RelativeLayout>
+
+</FrameLayout>
