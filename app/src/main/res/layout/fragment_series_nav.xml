@@ -13,11 +13,15 @@
         tools:context=".SeriesFragment">
 
         <!-- TODO: Update blank fragment layout -->
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addseries"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Add Series"
+            android:src="@drawable/ic_add"
+            android:layout_margin="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:background="@color/colorAccent"/>
 
         <EditText
@@ -25,7 +29,6 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Search Series"
-            android:layout_below="@id/addseries"
             android:drawableRight="@drawable/ic_search"
             android:drawableTint="@color/colorAccent" ></EditText>
 
