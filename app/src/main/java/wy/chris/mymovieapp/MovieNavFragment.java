@@ -9,8 +9,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 
 /**
@@ -38,6 +42,42 @@ public class MovieNavFragment extends Fragment {
             }
         });
         return  view;
+    }
+
+    private  class MovieAdapter extends BaseAdapter
+    {
+        ArrayList<MovieModel> movieModels=new ArrayList<MovieModel>();
+
+        public MovieAdapter(ArrayList<MovieModel> movieModels) {
+            this.movieModels = movieModels;
+        }
+
+        @Override
+        public int getCount() {
+            return movieModels.size();
+        }
+
+        @Override
+        public Object getItem(int i) {
+            return movieModels.get(i);
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return i;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+            LayoutInflater inflater=getLayoutInflater();
+            View view1=inflater.inflate(R.layout.movielayout,null);
+            MovieModel movieModel=movieModels.get(i);
+            TextView txtsrno=view1.findViewById(R.id.edText);
+            TextView movieName=view1.findViewById(R.id.edLstview);
+            txtsrno.setText(String.valueOf(i+1));
+            movieName.setText(movieModel.movieName);
+            return view1;
+        }
     }
 
 }
